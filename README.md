@@ -1,4 +1,4 @@
-# frontend-homework
+# frontend-homework, вариант 11
 > Introductory homework for the course "Frontend-development"
 
 ## Привет!
@@ -12,7 +12,7 @@
 
 #### Задание:
 
-Чтобы посмотреть задание, перейди в ветку своего варианта.
+Напишите функцию `rle`, которая реализует RLE сжатие
 
 ### Файлы
 В репозитории содержатся следующие файлы:
