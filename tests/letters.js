@@ -33,10 +33,10 @@ QUnit.module('Тестируем функцию letters', function () {
 	});
 
 	QUnit.test('Оставляет последнюю букву, остальные удаляет', function (assert) {
-		assert.strictEqual(letters('121', true), '21');
-		assert.strictEqual(letters('wWw', true), 'Ww');
-		assert.strictEqual(letters('.-.', true), '-.');
-		assert.strictEqual(letters(' 0 ', true), '0 ');
+		assert.strictEqual(letters('121', false), '21');
+		assert.strictEqual(letters('wWw', false), 'Ww');
+		assert.strictEqual(letters('.-.', false), '-.');
+		assert.strictEqual(letters(' 0 ', false), '0 ');
 	});
 
 	QUnit.test('Удаляет повторяющиеся буквы в разных словах', function (assert) {
@@ -45,12 +45,12 @@ QUnit.module('Тестируем функцию letters', function () {
 		assert.strictEqual(letters('мама мыла раму'), 'ылру');
 		assert.strictEqual(letters('"Кукареку!", сказал Петух'), 'р!,сзлПтх');
 
-		assert.strictEqual(letters('мама мыла раму'), 'ма ылру');
-		assert.strictEqual(letters('от топота копыт'), 'от пакы');
-		assert.strictEqual(letters('hello world'), 'helo wrd');
+		assert.strictEqual(letters('мама мыла раму', true), 'ма ылру');
+		assert.strictEqual(letters('от топота копыт', true), 'от пакы');
+		assert.strictEqual(letters('hello world', true), 'helo wrd');
 
-		assert.strictEqual(letters('мама мыла раму'), 'ыл раму');
-		assert.strictEqual(letters('от топота копыт'), 'а копыт');
-		assert.strictEqual(letters('hello world'), 'he world');
+		assert.strictEqual(letters('мама мыла раму', false), 'ыл раму');
+		assert.strictEqual(letters('от топота копыт', false), 'а копыт');
+		assert.strictEqual(letters('hello world', false), 'he world');
 	});
 });
