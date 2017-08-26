@@ -43,7 +43,7 @@ QUnit.module('Тестируем функцию letters', function () {
 		assert.strictEqual(letters('привет, мир'), 'пвет, м');
 		assert.strictEqual(letters('hello, world'), 'he, wrd');
 		assert.strictEqual(letters('мама мыла раму'), 'ылру');
-		assert.strictEqual(letters('"Кукареку!", сказал Петух'), 'р!,сзлПтх');
+		assert.strictEqual(letters('"Кукареку!", сказал Петух'), 'Кр!,сзлПтх');
 
 		assert.strictEqual(letters('мама мыла раму', true), 'ма ылру');
 		assert.strictEqual(letters('от топота копыт', true), 'от пакы');
