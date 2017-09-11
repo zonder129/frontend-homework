@@ -14,3 +14,4 @@ const plainify = function(nested) {
 
 	    return totalPath;
 	}, {});
+	
